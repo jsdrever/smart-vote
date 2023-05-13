@@ -1,3 +1,6 @@
+## Collaborators
+This project was brought to you by the unrivaled creative minds of TableFlip Coders &copy;(┛ಠ_ಠ)┛彡┻━┻ Jeff Drever, Danielle Sison, Logan (LastName), Tim Johnson, Manuel (LastName), one or two more members TBD
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,4 +71,58 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
 # smart-vote
+![GitHub license](https://img.shields.io/badge/license-APACHE 2.0-blue.svg)
+
+## Description
+
+A congress voting records app for informing voters on their actions.
+
+## Table of Contents 
+
+* [Installation](#installation)
+
+* [Usage](#usage)
+
+* [License](#license)
+
+* [Contributing](#contributing)
+
+* [Tests](#tests)
+
+* [Questions](#questions)
+
+## Installation
+
+To install necessary dependencies, run the following command:
+
+```
+npm i && npm run seeds && npm start
+```
+
+## Usage
+
+undefined
+
+## License
+
+This project is licensed under the APACHE 2.0 license.
+  
+## Contributing
+
+undefined
+
+## Tests
+
+To run tests, run the following command:
+
+```
+npm test
+```
+
+## Questions
+
+If you have any questions about the repo, open an issue or contact me directly at jsdrever09@gmail.com. You can find more of my work at [jsdrever](https://github.com/jsdrever/).
+
