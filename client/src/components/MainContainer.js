@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import TBD from './pages/TBD';
 
 export default function MainContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -27,7 +28,7 @@ export default function MainContainer() {
     if (currentPage === 'Blog') {
       return <Blog />;
       // senators X and Y / Opposition X and Y
- 
+    }
     return <Contact />;
     // senator and the bills they've voted on page
   };
@@ -43,3 +44,4 @@ export default function MainContainer() {
     </div>
   );
 }
+
