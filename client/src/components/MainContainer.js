@@ -15,13 +15,17 @@ export default function MainContainer() {
     if (currentPage === 'Home') {
       return <Home />;
     }
+    // page with the selection of options
     if (currentPage === 'About') {
       return <About />;
+      // congress --> House / Senate
     }
     if (currentPage === 'Blog') {
       return <Blog />;
+      // senators X and Y / Opposition X and Y
     }
     return <Contact />;
+    // senator and the bills they've voted on page
   };
 
   const handlePageChange = (page) => setCurrentPage(page);
