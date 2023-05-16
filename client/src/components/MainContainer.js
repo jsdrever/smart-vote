@@ -20,10 +20,14 @@ export default function MainContainer() {
       return <About />;
       // congress --> House / Senate
     }
+    if (currentPage === 'TBD') {
+      return <TBD />;
+      // tbd for every other link option
+  }
     if (currentPage === 'Blog') {
       return <Blog />;
       // senators X and Y / Opposition X and Y
-    }
+ 
     return <Contact />;
     // senator and the bills they've voted on page
   };

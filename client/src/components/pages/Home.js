@@ -1,5 +1,5 @@
 //! Homepage design; would be cool if it showed dates for next elections or a selection for state of residence. Open for debate
-
+// gonna make this look like andrews project slide
 import React from 'react';
 
 export default function Home() {
