@@ -1,6 +1,3 @@
-//! editing required
-
-
 const Tech = require('./Tech');
 const Matchup = require('./Matchup');
 
