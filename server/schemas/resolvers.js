@@ -4,7 +4,13 @@ const bcrypt = require('bcrypt');
 
 const resolvers = {
   Query: {
-    // Add query resolvers
+    users: async () => {
+      return User.find();
+    },
+
+    user: async (parent, { profileId }) => {
+      return User.findOne({ _id: profileId });
+    },
   },
   Mutation: {
     async createUser(_, { email, password }) {
