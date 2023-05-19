@@ -1,55 +1,55 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useMutation, useQuery } from '@apollo/client';
-import { QUERY_TECH } from '../utils/queries';
-import { CREATE_MATCHUP } from '../utils/mutations';
+
 
 const Senators = () => {
   return (
     <body>
-   <div>
-    <h4 className='text-blue-900'>Alabama</h4>
-    <ul className='space-y-4 text-red-800'>
+
+   <div className='max-w-sm rounded shadow-md border-4 border-red-800 my-5 ml-5 mb-5'>
+    <h1 className='text-blue-900 text-decoration-line: underline font-extrabold text-center'>Alabama</h1>
+    <ul className='text-red-800 text-center'>
       <li><a href=''>Senator Name</a></li>
       <li><a href=''>Senator Name</a></li>
     </ul>
    </div>
 
-   <div>
-    <h4 className='text-blue-900'>Alaska</h4>
-    <ul className='space-y-4 text-red-800'>
+   <div className='max-w-sm rounded shadow-md border-4 border-red-800 ml-5 mb-5'>
+    <h1 className='text-blue-900 text-decoration-line: underline font-extrabold  ml-5 text-center'>Alaska</h1>
+    <div >
+    <ul className='text-red-800 text-center '>
       <li><a href=''>Senator Name</a> </li>
       <li><a href=''>Senator Name</a></li>
     </ul>
+    </div>
    </div>
 
-   <div>
-    <h4 className='text-blue-900'>Arizona</h4>
-    <ul className='space-y-4 text-red-800'>
+   <div className='max-w-sm rounded shadow-md border-4 border-red-800 ml-5 mb-5'>
+    <h1 className='text-blue-900 text-decoration-line: underline font-extrabold ml-5 text-center'>Arizona</h1>
+    <ul className='text-red-800 text-center'>
       <li>Senator Name</li>
       <li>Senator Name</li>
     </ul>
    </div>
 
-   <div>
-    <h4 className='text-blue-900'>Arkansas</h4>
-    <ul className='space-y-4 text-red-800'>
+   <div className='max-w-sm rounded shadow-md border-4 border-red-800 ml-5 mb-5'>
+    <h1 className='text-blue-900 text-decoration-line: underline font-extrabold text-center'>Arkansas</h1>
+    <ul className='text-red-800 text-center'>
       <li>Senator Name</li>
       <li>Senator Name</li>
     </ul>
    </div>
 
-   <div>
-    <h4 className='text-blue-900'>Alaska</h4>
-    <ul className='space-y-4 text-red-800'>
+   <div className='max-w-sm rounded shadow-md border-4 border-red-800 ml-5 mb-5'>
+    <h1 className='text-blue-900 text-decoration-line: underline font-extrabold text-center'>Alaska</h1>
+    <ul className='text-red-800 text-center'>
       <li>Senator Name</li>
       <li>Senator Name</li>
     </ul>
    </div>
 
-   <div>
-    <h4 className='text-blue-900'>California</h4>
-    <ul className='space-y-4 text-red-800'>
+   <div className='max-w-sm rounded shadow-md border-4 border-red-800 ml-5 mb-5'>
+    <h1 className='mb-4 text-blue-900 text-decoration-line: underline font-extrabold text-center'>California</h1>
+    <ul className='text-red-800 text-center'>
       <li>Senator Name</li>
       <li>Senator Name</li>
     </ul>
