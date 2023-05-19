@@ -1,5 +1,5 @@
 ## Collaborators
-This project was brought to you by the unrivaled creative minds of TableFlip Coders &copy;(┛ಠ_ಠ)┛彡┻━┻ Jeff Drever, Danielle Sison, Logan (LastName), Tim Johnson, Manuel Corral, Joshua Romani one or two more members TBD
+This project was brought to you by the unrivaled creative minds of TableFlip Coders Andrew Allemond, Danielle Sison, Jeffrey Drever, Jesus Vazquez, Joshua Romani, Logan Landen, Tim Johnson, Vageli Stathatos
 
 # Getting Started with Create React App
 
@@ -78,7 +78,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Description
 
-A congress voting records app for informing voters on their actions.
+Introducing SmartVote, the revolutionary website that empowers voters with intelligent and informed decision-making. With SmartVote, you can say goodbye to the confusion and time-consuming research that comes with election season. Our platform analyzes the positions, track records, and policies of candidates. Seamlessly navigate through profiles, compare stances, and gain insights into their voting history. With SmartVote, take charge of your vote and join the movement towards an informed electorate. Together, let's shape the future with SmartVote.
+
+## Motivation
+We recognize the importance of an informed electorate and the impact it can have on shaping our society. By providing a comprehensive platform that analyzes candidate positions, track records, and policies, we aim to simplify the complex task of researching and understanding political candidates.
+
 
 ## Table of Contents 
 
@@ -104,7 +108,7 @@ npm i && npm run seeds && npm start
 
 ## Usage
 
-undefined
+Link to the github repo can be found here: https://github.com/jsdrever/smart-vote.git
 
 ## License
 
@@ -112,7 +116,14 @@ This project is licensed under the APACHE 2.0 license.
   
 ## Contributing
 
-undefined
+Andrew Allemond: https://github.com/aallemond
+Danielle Sison: https://github.com/DanielleSison
+Jeffrey Drever: https://github.com/jsdrever
+Jesus Vazquez:  https://github.com/JesusV545
+Joshua Romani: https://github.com/DongleJosh
+Logan Landen: https://github.com/LoganWantstoCode
+Tim Johnson: https://github.com/timjohnson818
+Vageli Stathatos: https://github.com/bulkingfire
 
 ## Tests
 
