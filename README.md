@@ -1,5 +1,5 @@
 ## Collaborators
-This project was brought to you by the unrivaled creative minds of TableFlip Coders &copy;(┛ಠ_ಠ)┛彡┻━┻ Jeff Drever, Danielle Sison, Logan (LastName), Tim Johnson, Manuel Corral, one or two more members TBD
+This project was brought to you by the unrivaled creative minds of TableFlip Coders &copy;(┛ಠ_ಠ)┛彡┻━┻ Jeff Drever, Danielle Sison, Logan (LastName), Tim Johnson, Manuel Corral, Joshua Romani one or two more members TBD
 
 # Getting Started with Create React App
 
