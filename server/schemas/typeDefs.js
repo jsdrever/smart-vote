@@ -7,7 +7,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    # Add any query types you need
+    # Add query types
   }
 
   type Mutation {
