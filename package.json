@@ -28,7 +28,7 @@
   "scripts": {
     "start": "react-scripts start",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-    "install": "cd server && npm i && cd ../client && npm i",
+    "install": "cd server && npm i --dev && cd ../client && npm i --dev",
     "build": "cd client && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
