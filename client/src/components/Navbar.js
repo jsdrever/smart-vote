@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
-      <nav className="bg-red-800 text-white">
+      <nav className="bg-red-800 text-white border-y-2 border-black">
         <div className="container mx-auto flex items-center justify-between px-4 py-2">
-          <ul className="flex space-x-4">
+          <ul className="flex space-x-4 text-decoration-line: underline">
             <li>
               <Link to="/" className="hover:text-gray-300">
                 Home
