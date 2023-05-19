@@ -1,4 +1,4 @@
-const { Tech, Matchup } = require('../models');
+/* const { Tech, Matchup } = require('../models');
 
 const resolvers = {
   Query: {
@@ -22,6 +22,28 @@ const resolvers = {
         { new: true }
       );
       return vote;
+    },
+  },
+}; */
+
+module.exports = resolvers;
+
+
+const User = require('../models/User');
+
+const resolvers = {
+  Query: {
+    // Add  query resolvers
+  },
+  Mutation: {
+    async createUser(_, { email, password }) {
+      try {
+        const user = new User({ email, password });
+        await user.save();
+        return user;
+      } catch (error) {
+        throw new Error(error);
+      }
     },
   },
 };
