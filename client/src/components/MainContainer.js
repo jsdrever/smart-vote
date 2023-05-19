@@ -1,11 +1,16 @@
 //! Editing required
 
 import React, { useState } from 'react';
-import NavTabs from './NavTabs';
+import Navbar from './Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
-import Blog from './pages/Blog';
-import Contact from './pages/Contact';
+import Senators from './pages/Senators';
+import Bills from './pages/Bills';
+import NotFound from './pages/NotFound';
+import SearchResults from './pages/SearchResult';
+import Shop from './pages/ShopPage'
+import SignUp from './pages/SignUp';
+import Contact from './pages/NotFound';
 
 export default function MainContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -15,13 +20,33 @@ export default function MainContainer() {
     if (currentPage === 'Home') {
       return <Home />;
     }
+    // page with the selection of options
     if (currentPage === 'About') {
       return <About />;
+      // congress --> House / Senate
     }
-    if (currentPage === 'Blog') {
-      return <Blog />;
+    if (currentPage === 'Senators') {
+      return <Senators />;
+      // tbd for every other link option
+  }
+    if (currentPage === 'Bills') {
+      return <Bills />;
+    }
+    if (currentPage === 'Not-found') {
+      return <NotFound />;
+    }
+    if (currentPage === 'Search-Results') {
+      return <SearchResults />;
+    }
+    if (currentPage === 'Shop') {
+      return <ShopPage />;
+    }
+    if (currentPage === 'Sign-Up') {
+      return <SignUp />;
+      // senators X and Y / Opposition X and Y
     }
     return <Contact />;
+    // senator and the bills they've voted on page
   };
 
   const handlePageChange = (page) => setCurrentPage(page);
@@ -35,3 +60,4 @@ export default function MainContainer() {
     </div>
   );
 }
+

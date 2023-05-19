@@ -1,27 +1,33 @@
-const { Tech, Matchup } = require('../models');
+
+const User = require('../models/User');
+const bcrypt = require('bcrypt');
 
 const resolvers = {
   Query: {
-    tech: async () => {
-      return Tech.find({});
-    },
-    matchups: async (parent, { _id }) => {
-      const params = _id ? { _id } : {};
-      return Matchup.find(params);
-    },
+    // Add query resolvers
   },
   Mutation: {
-    createMatchup: async (parent, args) => {
-      const matchup = await Matchup.create(args);
-      return matchup;
+    async createUser(_, { email, password }) {
+      try {
+        const user = new User({ email, password });
+        await user.save();
+        return user;
+      } catch (error) {
+        throw new Error(error);
+      }
     },
-    createVote: async (parent, { _id, techNum }) => {
-      const vote = await Matchup.findOneAndUpdate(
-        { _id },
-        { $inc: { [`tech${techNum}_votes`]: 1 } },
-        { new: true }
-      );
-      return vote;
+    async loginUser(_, {email, password}) {
+      const user = await User.findOne({email});
+      if(!user){
+          throw new Error('User not found');
+      }
+
+      const isValidPassword = await bcrypt.compare(password, user.password);
+      if(!isValidPassword) {
+        throw new Error('Invalid password');
+      }
+
+      return user;
     },
   },
 };
