@@ -1,4 +1,5 @@
 import React from 'react';
+import Auth from "../utils/auth";
 import { Link } from 'react-router-dom';
 
 function Navbar() {
@@ -19,6 +20,16 @@ function Navbar() {
             <li>
               <Link to="/bills" className="hover:text-gray-300">
                 Bills
+              </Link>
+            </li>
+            <li>
+              <Link to="/signup" className="hover:text-gray-300">
+                Signup
+              </Link>
+            </li>
+            <li>
+              <Link to="/login" className="hover:text-gray-300">
+                Login
               </Link>
             </li>
           </ul>
