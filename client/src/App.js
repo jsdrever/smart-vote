@@ -10,6 +10,7 @@ import Home from "./components/pages/Home";
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Senators from './components/pages/Senators';
+import NotFound from './components/pages/NotFound';
 
 
 const client = new ApolloClient({
@@ -24,7 +25,7 @@ function App() {
         <div className="flex flex-col min-h-screen">
           <Header />
           <Navbar />
-          <Home />
+          <NotFound />
           <Routes>
           <Route 
                 path="/login" 
