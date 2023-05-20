@@ -10,6 +10,7 @@ import Home from "./components/pages/Home";
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Senators from './components/pages/Senators';
+import Bills from './components/pages/Bills';
 import NotFound from './components/pages/NotFound';
 
 
@@ -38,6 +39,10 @@ function App() {
                <Route 
                 path="/senators" 
                 element={<Senators />} 
+              />
+               <Route 
+                path="/bills" 
+                element={<Bills />} 
               />
           </Routes>
           <Footer />
