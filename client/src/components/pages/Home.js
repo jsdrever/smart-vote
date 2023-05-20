@@ -4,7 +4,7 @@ import { QUERY_MATCHUPS } from '../utils/queries';
 
 const Home = () => {
   return (
-    <>This is the homepage/welcoming</>
+    <>This is the homepage/welcoming/hi there</>
   )
 };
 
