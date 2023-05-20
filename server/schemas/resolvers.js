@@ -1,7 +1,7 @@
-
+const {AuthenticationError} = require('apollo-server-express')
 const User = require('../models/User');
 // const bcrypt = require('bcrypt');
-const { signToken } = require('../../utils/auth');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -29,7 +29,7 @@ const resolvers = {
     //       throw new Error('User not found');
     //   }
 
-    //   const isValidPassword = await bcrypt.compare(password, user.password);
+    //   const isValidPassword = await user.compare(password, user.password);
     //   if(!isValidPassword) {
     //     throw new Error('Invalid password');
     //   }
