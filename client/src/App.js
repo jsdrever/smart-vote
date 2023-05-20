@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Senators from './components/pages/Senators';
+import Bills from './components/pages/Bills';
 
 
 const client = new ApolloClient({
@@ -36,6 +37,10 @@ function App() {
                <Route 
                 path="/senators" 
                 element={<Senators />} 
+              />
+               <Route 
+                path="/bills" 
+                element={<Bills />} 
               />
           </Routes>
           <Footer />
