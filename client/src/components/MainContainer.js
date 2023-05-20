@@ -1,7 +1,6 @@
 //! Editing required
 
 import React, { useState } from 'react';
-import NavTabs from './Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Senators from './pages/Senators';

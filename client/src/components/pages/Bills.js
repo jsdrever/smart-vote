@@ -8,7 +8,7 @@ import React, { useState } from 'react';
 
 const Bills = () => {
     return (
-       <body>
+       <>
         <div className='grid grid-rows-8 grid-cols-1 m-5'>
          <div className='max-w-sm rounded shadow-md border-4 border-red-800 my-5 ml-5 mb-5'>
           <h1 className='text-blue-900 text-decoration-line: underline font-extrabold text-center font-serif'>Senator Name</h1>
@@ -50,7 +50,7 @@ const Bills = () => {
        </div>
         </div>
          </div>
-       </body>
+       </>
     )
 };
 
