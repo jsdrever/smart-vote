@@ -8,7 +8,7 @@ import Senators from './pages/Senators';
 import Bills from './pages/Bills';
 import NotFound from './pages/NotFound';
 import SearchResults from './pages/SearchResult';
-import Shop from './pages/ShopPage'
+import ShopPage from './pages/ShopPage'
 import SignUp from './pages/SignUp';
 import Contact from './pages/NotFound';
 import Navbar from './Navbar';

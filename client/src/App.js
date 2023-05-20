@@ -5,11 +5,13 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Home from "./components/pages/Home";
 
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Senators from './components/pages/Senators';
 import Bills from './components/pages/Bills';
+import NotFound from './components/pages/NotFound';
 
 
 const client = new ApolloClient({
@@ -24,7 +26,7 @@ function App() {
         <div className="flex flex-col min-h-screen">
           <Header />
           <Navbar />
-          {/* <Content /> */}
+          <NotFound />
           <Routes>
           <Route 
                 path="/login" 
