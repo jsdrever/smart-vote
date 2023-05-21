@@ -27,6 +27,7 @@ function App() {
         <div className="flex flex-col min-h-screen">
           <Header />
           <Navbar />
+          {/* <SearchBar /> */}
           <Routes>
               <Route 
                 path="/" 
