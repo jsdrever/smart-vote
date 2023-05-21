@@ -7,11 +7,12 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./components/pages/Home";
 
-import Login from './pages/Login';
-import Signup from './pages/Signup';
+import Login from './components/pages/Login';
+import Signup from './components/pages/Signup';
 import Senators from './components/pages/Senators';
 import Bills from './components/pages/Bills';
 import NotFound from './components/pages/NotFound';
+import Donation from './components/pages/Donation';
 
 
 const client = new ApolloClient({
@@ -26,9 +27,12 @@ function App() {
         <div className="flex flex-col min-h-screen">
           <Header />
           <Navbar />
-          <NotFound />
           <Routes>
-          <Route 
+              <Route 
+                path="/" 
+                element={<Home />} 
+              />
+              <Route 
                 path="/login" 
                 element={<Login />} 
               />
@@ -43,6 +47,14 @@ function App() {
                <Route 
                 path="/bills" 
                 element={<Bills />} 
+              />
+              <Route 
+              path="*" 
+              element={<NotFound />} 
+              />
+              <Route 
+              path="/donation" 
+              element={<Donation />} 
               />
           </Routes>
           <Footer />
