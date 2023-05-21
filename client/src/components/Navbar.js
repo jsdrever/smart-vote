@@ -27,8 +27,8 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/shop" className="hover:text-gray-300">
-              Shop
+            <Link to="/donation" className="hover:text-gray-300">
+              Donation
             </Link>
           </li>
         </ul>
