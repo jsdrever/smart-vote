@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 const Senators = () => {
   return (
-    <body>
+    <>
     <div className='grid grid-rows-10 grid-cols-5 m-5'>
    <div className='max-w-sm rounded shadow-md border-4 border-red-800 my-5 ml-5 mb-5'>
     <h1 className='text-blue-900 text-decoration-line: underline font-extrabold text-center font-serif'>Alabama</h1>
@@ -72,7 +72,7 @@ const Senators = () => {
    
    
 
-    </body>
+    </>
    
   )
 };
