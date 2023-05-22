@@ -17,7 +17,7 @@ const SearchResult = ({ searchQuery }) => {
         <div className="bg-blue-900 bg-opacity-75 p-8">
         <div className='grid grid-rows-8 grid-cols-1 m-5'>
          <div className='max-w-sm rounded shadow-md border-4 border-red-800 my-5 ml-5 mb-5'>
-          <img className="items-center justify-center bg-center" src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/John_Cornyn_%28cropped%29.jpg/190px-John_Cornyn_%28cropped%29.jpg' /> 
+          <img className="items-center justify-center bg-center" src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/John_Cornyn_%28cropped%29.jpg/190px-John_Cornyn_%28cropped%29.jpg' alt='chamber'/> 
           {/* wikipedia has pictures of all the senators i wonder if there's a way to gain access also how do i center the image*/}
           <h1 className="text-3xl font-bold text-white mt-10 text-decoration-line: underline font-extrabold text-center font-serif">John_Cornyn_ </h1>
           {/* it would be kinda neat if the senators name was a hyperlink to their website */}

@@ -1,6 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Home = () => {
+  // function SearchBar({ onFormSubmit }) {
+    // Our state variable for the search term. Defaults to "microsoft/vscode".
+  //   const [term, setTerm] = useState('microsoft/vscode');
+      const [searchInput, setSearchInput] = useState('');
+  
+    const handleFormSubmit = async (e) => {
+      e.preventDefault();
+  
+      // onFormSubmit(searchInput);
+      try {
+          // const response = await fetch('url goes here');
+          // const data = await response.json();
+          // console.log(data);
+          console.log(searchInput);
+      }
+      catch(err) {
+          console.error(err);
+      }
+    };
+    //! We declare a state variable that is an array called `issues` and a function to update it. 
+    //! this is for the searchbar i think/hope
+    // const [issues, setIssues] = useState([]);
+
+    //! When the page loads, set the document title to something specific to this app.
+    //! This only runs once because of our empty dependency array.
+    // useEffect(() => {
+    //   document.title = 'GitHub issues';
+    // }, []);
+  
+    //! Helper function that preforms an API request and sets the `issues` array to a list of issues from GitHub
+    // const getRepoIssues = (repo) => {
+    //   let issuesURL = `https://api.github.com/repos/${repo}/issues?direction=asc`;
+    //   console.log('issuesURL', issuesURL);
+    //   fetch(issuesURL)
+    //     .then((res) => res.json())
+    //     .then((response) => setIssues(response));
+    // };
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-cover bg-center" style={{ backgroundImage: 'url(/images/thumb-1920-554598senate.jpg)' }}>
       <div className="bg-blue-900 bg-opacity-75 p-8">
@@ -30,7 +67,10 @@ const Home = () => {
         </p>
       </div>
       <div className="mt-8 w-2/3 flex">
+        <form className="ui form" onSubmit={handleFormSubmit}>
         <input
+        value={searchInput}
+        onChange={(e) => setSearchInput(e.target.value)}
           type="text"
           className="flex-1 px-4 py-2 rounded-l-lg focus:outline-none bg-white text-lg"
           placeholder="Search for a Senator"
@@ -49,6 +89,7 @@ const Home = () => {
             />
           </svg>
         </button>
+        </form>
       </div>
     </div>
   );

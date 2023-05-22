@@ -4,29 +4,22 @@ import React, { useState } from 'react';
 // In this case we only passed one prop, `onFormSubmit`
 function SearchBar({ onFormSubmit }) {
   // Our state variable for the search term. Defaults to "microsoft/vscode".
-  const [term, setTerm] = useState('microsoft/vscode');
+//   const [term, setTerm] = useState('microsoft/vscode');
+    const [searchInput, setSearchInput] = useState('');
 
-  const sendTerm = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
 
-    onFormSubmit(term);
+    // onFormSubmit(searchInput);
+    try {
+        const response = await fetch('url goes here');
+        const data = await response.json();
+        console.log(data);
+    }
+    catch(err) {
+        console.error(err);
+    }
   };
-
-  return (
-    <div className="search-bar ui segment">
-      <form className="ui form" onSubmit={sendTerm}>
-        <div className="field">
-          <label>Retrieve GitHub Issues</label>
-          <input
-            type="text"
-            value={term}
-            onChange={(e) => setTerm(e.target.value)}
-            placeholder="facebook/react"
-          />
-        </div>
-      </form>
-    </div>
-  );
 }
 
 export default SearchBar;
