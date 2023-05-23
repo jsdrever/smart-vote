@@ -1,16 +1,16 @@
 //! Editing required
 
 import React, { useState } from 'react';
-import Navbar from './Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Senators from './pages/Senators';
 import Bills from './pages/Bills';
 import NotFound from './pages/NotFound';
 import SearchResults from './pages/SearchResult';
-import Shop from './pages/ShopPage'
+import ShopPage from './pages/ShopPage'
 import SignUp from './pages/SignUp';
 import Contact from './pages/NotFound';
+import Navbar from './Navbar';
 
 export default function MainContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -54,7 +54,7 @@ export default function MainContainer() {
   return (
     <div>
       {/* We are passing the currentPage from state and the function to update it */}
-      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+      <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
       {/* Here we are calling the renderPage method which will return a component  */}
       {renderPage()}
     </div>
