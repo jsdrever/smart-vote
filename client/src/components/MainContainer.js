@@ -8,7 +8,7 @@ import Bills from './pages/Bills';
 import NotFound from './pages/NotFound';
 import SearchResults from './pages/SearchResult';
 import ShopPage from './pages/ShopPage'
-import SignUp from './pages/SignUp';
+import SignUp from './pages/Signup';
 import Contact from './pages/NotFound';
 import Navbar from './Navbar';
 
