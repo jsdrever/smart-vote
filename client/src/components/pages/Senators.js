@@ -6,7 +6,7 @@ const Senators = () => {
   useEffect(() => {
     const fetchSenators = async () => {
       try {
-        const response = await fetch('https://api.placeholder.com/senators'); // replace with actual API endpoint
+        const response = await fetch('https://api.placeholder.com/senators'); // replace with actual API endpoint https://api.congress.gov/v3/member?api_key=7JqeXnx57GmlOSkwahRXM6cia6X57mpXpdJ29n2v
         const data = await response.json();
         setSenators(data);
       } catch (error) {
