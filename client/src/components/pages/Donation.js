@@ -6,7 +6,7 @@ const Donation = () => {
       <div className="bg-blue-900 bg-opacity-75 p-8">
         <h1 className="text-4xl font-bold text-white mt-10 text-center">Donate to the Developers</h1>
         <p className="text-lg text-white mt-4 text-center">
-          If you want to continue in improving this website, or if you simply find this website useful with helping you find the right candidates to vote for.<br></br>
+          If you want to aide in improving this website, or if you simply find this website useful with helping you find the right candidates to vote for.<br></br>
           Please consider donating to the developers. Thank you!
         <div className="text-center">
         <a href="https://buy.stripe.com/test_9AQ9DAcVTc1J56ofYY" class="button" target="_blank" className="font-bold bg-black">Donate Now</a>
