@@ -26,12 +26,34 @@ const Senators = () => {
     <div className="bg-gray-100 p-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {senators.length > 0 ? (
-          senators.map(senator => (
-            <div key={senator.id} className="max-w-sm rounded shadow-md border-4 border-red-800 p-5">
-              <h1 className="text-blue-900 text-xl md:text-2xl font-bold text-center mb-4">{senator.state}</h1>
+          Object.values(
+            senators.reduce((acc, senator) => {
+              const { state, title, first_name, last_name } = senator;
+              const senatorClass = title.includes('1st Class') ? '1' : '2';
+
+              // Create or update the senator for the state
+              if (!acc[state]) {
+                acc[state] = {
+                  state,
+                  senators: [{ senatorClass, first_name, last_name }],
+                };
+              } else {
+                acc[state].senators.push({ senatorClass, first_name, last_name });
+              }
+
+              return acc;
+            }, {})
+          ).map(stateGroup => (
+            <div key={stateGroup.state} className="max-w-sm rounded shadow-md border-4 border-red-800 p-5">
+              <h1 className="text-blue-900 text-xl md:text-2xl font-bold text-center mb-4">{stateGroup.state}</h1>
               <ul className="text-red-800 text-center">
-                <li><a href="#">Senator 1: {senator.first_name} {senator.last_name}</a></li>
-                <li><a href="#">Senator 2: {senator.state_rank === 'junior' ? 'Junior' : 'Senior'} {senator.first_name} {senator.last_name}</a></li>
+                {stateGroup.senators.map((senator, index) => (
+                  <li key={`${senator.senatorClass}-${senator.first_name}-${senator.last_name}`}>
+                    <a href="#">
+                      Senator {senator.senatorClass}: {senator.first_name} {senator.last_name}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           ))
@@ -44,4 +66,3 @@ const Senators = () => {
 }
 
 export default Senators;
-
