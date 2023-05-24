@@ -6,6 +6,14 @@ const typeDefs = gql`
     email: String!
   }
 
+  type Senator {
+    _id: ID!
+    firstName: String!
+    lastName: String!
+    PartyAffiliation: String!
+    image: String
+  }
+
   type Auth {
     token: ID!
     user: User
@@ -14,6 +22,8 @@ const typeDefs = gql`
   type Query {
     users: [User]!
     user(userId: ID!): User
+    senators: [Senator]!
+    senator(senatorId: ID!): Senator
   }
 
   type Mutation {

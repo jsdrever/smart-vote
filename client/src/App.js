@@ -8,8 +8,9 @@ import Footer from "./components/Footer";
 import Home from "./components/pages/Home";
 // import SearchBar from './components/SearchBar';
 import Login from './components/pages/Login';
-import Signup from './components/pages/SignUp';
+import Signup from './components/pages/Signup';
 import Senators from './components/pages/Senators';
+// import Bills from './components/pages/BillsOne';
 import Bills from './components/pages/Bills';
 import NotFound from './components/pages/NotFound';
 import Donation from './components/pages/Donation';
@@ -60,6 +61,10 @@ function App() {
                 path="/senators" 
                 element={<Senators />} 
               />
+               {/* <Route 
+                path="/bills" 
+                element={<Bills />} 
+              /> */}
                <Route 
                 path="/bills" 
                 element={<Bills />} 
