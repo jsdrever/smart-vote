@@ -12,8 +12,10 @@ const Bills = () => {
   const [bills, setBills] = useState([]);
 
   const apiKey = 'cxscIDM6F7yNhGWcXHehmlLYMP8rZ31FAjKEj1Ht';
-  const apiUrl = "https://api.propublica.org/congress/v1/bills/search.json?query=megahertz";
-  
+  const apiUrl =  "https://api.propublica.org/congress/v1/115/senate/sessions/1/votes/17.json";
+ 
+  // "https://api.propublica.org/congress/v1/bills/search.json?query=megahertz";
+
   useEffect(() => {
   axios.get(apiUrl, {
     headers: {
@@ -22,8 +24,8 @@ const Bills = () => {
   })
     .then(response => {
       // Handle the response data
-      setBills(response.data.results[0].bills)
-      console.log(response.data.results[0].bills);
+      // setBills(response.data.results[0].bills)
+      console.log(response.data);
     })
     .catch(error => {
       // Handle the error
@@ -57,12 +59,14 @@ const Bills = () => {
          <div className='max-w-sm rounded shadow-md border-4 border-red-800 my-5 ml-5 mb-5'>
           <h1 className="text-3xl font-bold text-white mt-10 text-decoration-line: underline font-extrabold text-center font-serif">Bill Name </h1> 
            <ul className="text-lg text-white">
-            {bills.map(bill => <div>
-            <li> A brief description of the bill </li> {bill.bill_id}
+            <div>
+            <li> A brief description of the bill </li> 
             <li> xx/yea - xx/nay </li> d yea/nay - r yea/nay
             <li> Result (118th Congress) </li> 
-           </div>)}
-           
+           </div>
+           {/* )}
+           {bills.map(bill => 
+           {bill.bill_id[0]} */}
 
            </ul>
          </div>
