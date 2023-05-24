@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
+
+
 const Senators = () => {
   const [senators, setSenators] = useState([]);
+  const baseUrl = ".senate.gov"
 
   useEffect(() => {
     const fetchSenators = async () => {
@@ -21,6 +24,8 @@ const Senators = () => {
 
     fetchSenators();
   }, []);
+
+  
 
   return (
     <div className="bg-gray-100 p-5">
@@ -56,6 +61,8 @@ const Senators = () => {
                 ))}
               </ul>
             </div>
+
+
           ))
         ) : (
           <p>Loading senators...</p>
