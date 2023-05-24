@@ -14,6 +14,7 @@ const Billss = () => {
         });
         const data = await response.json();
         setBills(data.results[0].bills); //members = ???? what is this path
+        console.log(data.results[0].bills);
       } catch (error) {
         console.error('Error fetching bills:', error);
       }
@@ -28,17 +29,17 @@ const Billss = () => {
         {bills.length > 0 ? (
           Object.values(
             bills.reduce((acc, bill) => {
-              const { bill_id, title, votes, congress } = bill; 
+              const { bill_id, title, votes, congress, congressdotgov_url } = bill; 
               // const BillName = bill_id.includes('1st Class') ? '1' : '2'; I dont think i need this one
 
               // Create or update the bill
               if (!acc[bill_id]) {
                 acc[bill_id] = {
                   bill_id,
-                  bills: [{ bill_id, title, votes, congress }],
+                  bills: [{ bill_id, title, votes, congress, congressdotgov_url }],
                 };
               } else {
-                acc[bill_id].bills.push({ bill_id, title, votes, congress });
+                acc[bill_id].bills.push({ bill_id, title, votes, congress, congressdotgov_url });
               }
 
               return acc;
@@ -49,9 +50,10 @@ const Billss = () => {
               
               <ul className="text-red-800 text-center">
                 {billGroup.bills.map((bills, index) => (
-                  <li key={`${bills.bill_id}-${bills.title}-${bills.votes}`}>
-                    <a href="#">
-                      Bill {bills.bill_id}: {bills.title} {bills.votes} {bills.congress}
+                  <li key={`${bills.bill_id}-${bills.title}-${bills.votes}-${bills.congressdotgov_url}`}>
+                    <a href={bills.congressdotgov_url} target="_blank">
+                      Bill {bills.bill_id}: {bills.title} 
+                      Votes: {bills.votes} {bills.congress}
                     </a>
                   </li>
                 ))}
