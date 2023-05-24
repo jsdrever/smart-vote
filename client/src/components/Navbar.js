@@ -25,6 +25,11 @@ function Navbar() {
             </Link>
           </li>
           <li>
+            <Link to="/Billss" className="hover:text-gray-300">
+              Billss
+            </Link>
+          </li>
+          <li>
             <Link to="/donation" className="hover:text-gray-300">
               Donation
             </Link>
