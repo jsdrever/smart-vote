@@ -1,27 +1,50 @@
 import React, { useEffect, useState } from 'react';
 
+// const Billss = () => {
+//     const [bills, setBills] = useState([]);
+
+//   useEffect(() => {
+//     const fetchBills = async () => {
+//       try {
+//         const apiKey = 'cxscIDM6F7yNhGWcXHehmlLYMP8rZ31FAjKEj1Ht';
+//         const response = await fetch("https://api.propublica.org/congress/v1/bills/search.json?query=megahertz", {
+//           headers: {
+//             "X-API-Key": apiKey
+//           }
+//         });
+//         const data = await response.json();
+//         setBills(data.results[0].bills); //members = ???? what is this path
+//         console.log(data.results[0].bills);
+//       } catch (error) {
+//         console.error('Error fetching bills:', error);
+//       }
+//     };
+
+//     fetchBills();
+//   }, []);
+
 const Billss = () => {
-    const [bills, setBills] = useState([]);
+  const [bills, setBills] = useState([]);
 
-  useEffect(() => {
-    const fetchBills = async () => {
-      try {
-        const apiKey = 'cxscIDM6F7yNhGWcXHehmlLYMP8rZ31FAjKEj1Ht';
-        const response = await fetch("https://api.propublica.org/congress/v1/bills/search.json?query=megahertz", {
-          headers: {
-            "X-API-Key": apiKey
-          }
-        });
-        const data = await response.json();
-        setBills(data.results[0].bills); //members = ???? what is this path
-        console.log(data.results[0].bills);
-      } catch (error) {
-        console.error('Error fetching bills:', error);
-      }
-    };
+useEffect(() => {
+  const fetchBills = async () => {
+    try {
+      const apiKey = 'cxscIDM6F7yNhGWcXHehmlLYMP8rZ31FAjKEj1Ht';
+      const response = await fetch("https://api.propublica.org/congress/v1/house/votes/recent.json", {
+        headers: {
+          "X-API-Key": apiKey
+        }
+      });
+      const data = await response.json();
+      setBills(data.results.votes); //members = ???? what is this path
+      console.log(data.results.votes);
+    } catch (error) {
+      console.error('Error fetching bills:', error);
+    }
+  };
 
-    fetchBills();
-  }, []);
+  fetchBills();
+}, []);
 
   return (
     <div className="bg-gray-100 p-5 style={{ backgroundImage: 'url(/images/senate_chamber.jpeg)">
