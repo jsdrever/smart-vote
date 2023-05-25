@@ -75,6 +75,7 @@ function Signup(props) {
           class="w-full"
           alt="Constitution of the United States" />
       </div>
+      
        {/* <!-- Right column container --> */}
        <div class="mb-12 md:mb-0 md:w-8/12 lg:w-5/12 xl:w-5/12">
         <form  onSubmit={handleFormSubmit}>
