@@ -22,6 +22,7 @@ const client = new ApolloClient({
 });
 
 function App() {
+  // console.log(process.env.REACT_APP_API_KEY);
 
   // const [issues, setIssues] = useState([]);
 

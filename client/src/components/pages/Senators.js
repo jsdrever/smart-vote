@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react';
-require('dotenv').config()
-
-
 
 const Senators = () => {
   const [senators, setSenators] = useState([]);
@@ -9,7 +6,7 @@ const Senators = () => {
   useEffect(() => {
     const fetchSenators = async () => {
       try {
-        const apiKey = process.env.PRO_API_KEY;
+        const apiKey = process.env.REACT_APP_API_KEY;
         const response = await fetch('https://api.propublica.org/congress/v1/116/senate/members.json', {
           headers: {
             "X-API-Key": apiKey
