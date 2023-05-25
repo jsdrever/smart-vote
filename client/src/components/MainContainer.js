@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Senators from './pages/Senators';
 import Bills from './pages/Bills';
+import Billss from './pages/Billss';
 import NotFound from './pages/NotFound';
 import SearchResults from './pages/SearchResult';
 import ShopPage from './pages/ShopPage'
@@ -31,6 +32,9 @@ export default function MainContainer() {
   }
     if (currentPage === 'Bills') {
       return <Bills />;
+    }
+    if (currentPage === 'Billss') {
+      return <Billss />;
     }
     if (currentPage === 'Not-found') {
       return <NotFound />;

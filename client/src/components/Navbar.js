@@ -3,11 +3,9 @@ import Auth from "../utils/auth";
 import { Link } from 'react-router-dom';
 
 function Navbar() {
-  // const data = Auth.getProfile();
-  // console.log(data)
   return (
       <>
-      {/* { Auth.loggedIn() && (<div> Hello, {data.data.email} </div>)} */}
+     { Auth.loggedIn() && (<div> Hello, {Auth.getProfile().data.email} </div>)} 
     <nav className="bg-red-800 text-white border-y-2 border-black">
       <div className="container mx-auto flex items-center justify-between px-4 py-2">
         <ul className="flex space-x-4">
@@ -26,6 +24,11 @@ function Navbar() {
               Bills
             </Link>
           </li>
+          {/* <li>
+            <Link to="/Billss" className="hover:text-gray-300">
+              Billss
+            </Link>
+          </li> */}
           <li>
             <Link to="/donation" className="hover:text-gray-300">
               Donation
