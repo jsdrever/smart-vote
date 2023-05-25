@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
-
-
 const Senators = () => {
   const [senators, setSenators] = useState([]);
 
   useEffect(() => {
     const fetchSenators = async () => {
       try {
-        const apiKey = 'cxscIDM6F7yNhGWcXHehmlLYMP8rZ31FAjKEj1Ht';
+        const apiKey = process.env.REACT_APP_API_KEY;
         const response = await fetch('https://api.propublica.org/congress/v1/116/senate/members.json', {
           headers: {
             "X-API-Key": apiKey
