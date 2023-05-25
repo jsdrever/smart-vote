@@ -42,17 +42,5 @@ axios.request({
 
 export default search;
 
-// api key congress.gov 7JqeXnx57GmlOSkwahRXM6cia6X57mpXpdJ29n2v
-// ProPublica congress-api key: cxscIDM6F7yNhGWcXHehmlLYMP8rZ31FAjKEj1Ht
 
-// let url = 'https://api.propublica.org/congress/v1/116/senate/members.json';
-// axios.get(url,
-//   { 
-//     headers: { 
-//       'X-API-Key': "cxscIDM6F7yNhGWcXHehmlLYMP8rZ31FAjKEj1Ht"
-//     }
-//   }
-// )
-// .then (res=>console.log(res))   
-// .catch(err => console.log(err));
 
