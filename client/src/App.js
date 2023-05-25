@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import Home from "./components/pages/Home";
 // import SearchBar from './components/SearchBar';
 import Login from './components/pages/Login';
-import Signup from './components/pages/Signup';
+import Signup from './components/pages/SignUp';
 import Senators from './components/pages/Senators';
 // import Bills from './components/pages/BillsOne';
 import Bills from './components/pages/Bills';
@@ -22,6 +22,7 @@ const client = new ApolloClient({
 });
 
 function App() {
+  // console.log(process.env.REACT_APP_API_KEY);
 
   // const [issues, setIssues] = useState([]);
 
