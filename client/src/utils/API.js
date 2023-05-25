@@ -6,7 +6,7 @@ import axios from 'axios';
 //senators
 axios.request({
     url: "http://api.propublica.org/congress/v1/116/senate/members.json",
-    headers: { 'X-API-Key': "cxscIDM6F7yNhGWcXHehmlLYMP8rZ31FAjKEj1Ht" },
+    headers: { 'X-API-Key': process.env.REACT_APP_API_KEY },
     method: 'get'                      
 }).then(response => {
     // console.log(response.data.url);
@@ -18,7 +18,7 @@ axios.request({
 // bills
 axios.request({
     url: "http://api.propublica.org/congress/v1/bills/search.json?query=megahertz",
-    headers: { 'X-API-Key': "cxscIDM6F7yNhGWcXHehmlLYMP8rZ31FAjKEj1Ht" },
+    headers: { 'X-API-Key': process.env.REACT_APP_API_KEY },
     method: 'get'                      
 }).then(response => {
     // console.log(response.data.url);
@@ -30,7 +30,7 @@ axios.request({
 // votes
 axios.request({
     url: "http://api.propublica.org/congress/v1/115/senate/sessions/1/votes/17.json",
-    headers: { 'X-API-Key': "cxscIDM6F7yNhGWcXHehmlLYMP8rZ31FAjKEj1Ht" },
+    headers: { 'X-API-Key': process.env.REACT_APP_API_KEY },
     method: 'get'                      
 }).then(response => {
     // console.log(response.data.url);
@@ -42,17 +42,5 @@ axios.request({
 
 export default search;
 
-// api key congress.gov 7JqeXnx57GmlOSkwahRXM6cia6X57mpXpdJ29n2v
-// ProPublica congress-api key: cxscIDM6F7yNhGWcXHehmlLYMP8rZ31FAjKEj1Ht
 
-// let url = 'https://api.propublica.org/congress/v1/116/senate/members.json';
-// axios.get(url,
-//   { 
-//     headers: { 
-//       'X-API-Key': "cxscIDM6F7yNhGWcXHehmlLYMP8rZ31FAjKEj1Ht"
-//     }
-//   }
-// )
-// .then (res=>console.log(res))   
-// .catch(err => console.log(err));
 
