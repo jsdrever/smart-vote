@@ -35,12 +35,12 @@ function Login(props) {
 
       
 <section class="h-screen">
-  <div class="h-full">
+  <div class="h-full" style={{ backgroundImage: 'url(/images/thumb-1920-554598senate.jpg)' }}>
    
     <div
-      class="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
+      class="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between bg-blue-900 bg-opacity-75">
       <div
-        class="shrink-1 mb-12 ml-5 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">
+        class="shrink-1 mb-12 ml-5 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12 border-8 border-red-800">
         <img
           src="https://res.cloudinary.com/dxnwbl21t/image/upload/v1684807488/constitution2_te2fp5.jpg"
           class="w-full"
@@ -52,7 +52,7 @@ function Login(props) {
           {/* <!--Login Credentials--> */}
           <div
             class="flex flex-row  justify-center text-center">
-            <p class="mb-0 mr-4 text-lg ">Login</p>
+            <p class="mb-0 mr-4 font-extrabold text-xl text-red-600 ">Login</p>
           </div>
 
           {/* <!-- Separator between social media sign in and email/password sign in --> */}
@@ -64,7 +64,7 @@ function Login(props) {
           <div class="relative mb-6" data-te-input-wrapper-init>
             <input
               type="text"
-              class="peer block min-h-[auto] w-full rounded border-4 border-red-800 placeholder-blue-900 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear  data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+              class="peer block min-h-[auto] w-full rounded border-4 bg-white border-red-800 placeholder-blue-900 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear  data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
               id="email"
               placeholder="Email address" 
               onChange={handleChange}
@@ -80,7 +80,7 @@ function Login(props) {
           <div class="relative mb-6" data-te-input-wrapper-init>
             <input
               type="password"
-              class="peer block min-h-[auto] w-full rounded border-4 border-red-800 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+              class="peer block min-h-[auto] w-full rounded border-4 bg-white border-red-800 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
               id="password"
               placeholder="Password" 
               onChange={handleChange}
