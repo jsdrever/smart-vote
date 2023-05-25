@@ -11,7 +11,7 @@ import axios from 'axios';
 const Bills = () => {
   const [bills, setBills] = useState([]);
 
-  const apiKey = 'cxscIDM6F7yNhGWcXHehmlLYMP8rZ31FAjKEj1Ht';
+  const apiKey = process.env.REACT_APP_API_KEY;
   const apiUrl =  "https://api.propublica.org/congress/v1/115/senate/sessions/1/votes/17.json";
  
   // "https://api.propublica.org/congress/v1/bills/search.json?query=megahertz";

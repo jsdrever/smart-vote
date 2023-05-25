@@ -7,7 +7,7 @@ const Billss = () => {
   useEffect(() => {
     const fetchBills = async () => {
       try {
-        const apiKey = 'cxscIDM6F7yNhGWcXHehmlLYMP8rZ31FAjKEj1Ht';
+        const apiKey = process.env.REACT_APP_API_KEY;
         const response = await fetch("https://api.propublica.org/congress/v1/bills/search.json?active=true", {
           headers: {
             "X-API-Key": apiKey

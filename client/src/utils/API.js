@@ -1,7 +1,5 @@
 //! editing required
 const axios = require('axios');
-require('dotenv').config()
-
 // Axios is a popular NPM package used for preforming API requests
 import axios from 'axios';
 
