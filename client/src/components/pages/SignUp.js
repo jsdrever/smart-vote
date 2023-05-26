@@ -71,10 +71,11 @@ function Signup(props) {
       <div
         class="shrink-1 mb-12 ml-5 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12 border-8 border-red-800">
         <img
-          src="https://res.cloudinary.com/dxnwbl21t/image/upload/v1684807488/constitution2_te2fp5.jpg"
+          src="https://res.cloudinary.com/dxnwbl21t/image/upload/v1685058273/2_mpfmkw.png"
           class="w-full"
           alt="Constitution of the United States" />
       </div>
+      
        {/* <!-- Right column container --> */}
        <div class="mb-12 md:mb-0 md:w-8/12 lg:w-5/12 xl:w-5/12">
         <form  onSubmit={handleFormSubmit}>
