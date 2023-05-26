@@ -1,108 +1,10 @@
-// import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-// import { useMutation } from '@apollo/client';
-// import Auth from '../../utils/auth';
-// import { ADD_USER } from '../../utils/mutations';
-
-// function Signup(props) {
-//   const [formState, setFormState] = useState({ email: '', password: '' });
-//   const [addUser] = useMutation(ADD_USER);
-
-//   const handleFormSubmit = async (event) => {
-//     event.preventDefault();
-//     const { data } = await addUser({
-//       variables: {
-//         email: formState.email,
-//         password: formState.password,
-//       },
-//     });
-//     console.log(data)
-//     const token = data.createUser.token;
-//     Auth.login(token);
-//   };
-
-//   const handleChange = (event) => {
-//     const { name, value } = event.target;
-//     setFormState({
-//       ...formState,
-//       [name]: value,
-//     });
-//   };
-
-// const Signup = () => {
-//   const [formState, setFormState] = useState({
-//     email: '',
-//     password: '',
-//   });
-//   const [addUser] = useMutation(ADD_USER);
-
-//   // update state based on form input changes
-//   const handleChange = (event) => {
-//     const { name, value } = event.target;
-
-//     setFormState({
-//       ...formState,
-//       [name]: value,
-//     });
-//   };
-
-//   const handleFormSubmit = async (event) => {
-//     event.preventDefault();
-//     console.log(formState);
-
-//     try {
-//       const { data } = await addUser({
-//         variables: { ...formState },
-//       });
-
-//       Auth.login(data.addUser.token);
-//     } catch (e) {
-//       console.error(e);
-//     }
-//   };
-
-
-//   return (
-//     <div className="container my-1">
-//       <Link to="/login">← Go to Login</Link>
-
-//       <h2>Signup</h2>
-//       <form onSubmit={handleFormSubmit}>
-//         <div className="flex-row space-between my-2">
-//           <label htmlFor="email">Email:</label>
-//           <input
-//             placeholder="youremail@test.com"
-//             name="email"
-//             type="email"
-//             id="email"
-//             onChange={handleChange}
-//           />
-//         </div>
-//         <div className="flex-row space-between my-2">
-//           <label htmlFor="pwd">Password:</label>
-//           <input
-//             placeholder="******"
-//             name="password"
-//             type="password"
-//             id="pwd"
-//             onChange={handleChange}
-//           />
-//         </div>
-//         <div className="flex-row flex-end">
-//           <button type="submit">Submit</button>
-//         </div>
-//       </form>
-//     </div>
-//   );
-// }
-
-// export default Signup;
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../../utils/auth';
 import { ADD_USER } from '../../utils/mutations';
+import logo from '../assets/images/informedvoterlogo2.png';
+
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [addUser] = useMutation(ADD_USER);
@@ -127,68 +29,54 @@ function Signup(props) {
       [name]: value,
     });
   };
-// const Signup = () => {
-//   const [formState, setFormState] = useState({
-//     email: '',
-//     password: '',
-//   });
-//   const [addUser] = useMutation(ADD_USER);
-//   // update state based on form input changes
-//   const handleChange = (event) => {
-//     const { name, value } = event.target;
-//     setFormState({
-//       ...formState,
-//       [name]: value,
-//     });
-//   };
-//   const handleFormSubmit = async (event) => {
-//     event.preventDefault();
-//     console.log(formState);
-//     try {
-//       const { data } = await addUser({
-//         variables: { ...formState },
-//       });
-//       Auth.login(data.addUser.token);
-//     } catch (e) {
-//       console.error(e);
-//     }
-//   };
 
   return (
-    <div className="text-center">
-      <h2 class="mb-0 mr-4 font-extrabold text-xl text-red-600 ">Signup</h2>
-      <div
-            class="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
+    <div className="flex flex-col min-h-screen bg-gray-100" style={{ backgroundImage: 'url(/images/thumb-1920-554598senate.jpg)' }}>
+      <div className="max-w-2xl mx-auto p-4 flex-grow flex flex-col md:flex-row items-center">
+        <div className="flex items-center justify-center mb-8 md:mr-8">
+          <img src={logo} alt="logo" className="w-100 h-auto border-4 border-black rounded" />
+        </div>
+        <div className="w-full">
+          <h2 className="mb-4 text-3xl font-bold text-white text-center">Signup</h2>
+          <div className="my-4 border-t border-neutral-300"></div>
+          <form onSubmit={handleFormSubmit} className="w-full">
+            <div className="mb-6">
+              <label htmlFor="email" className="block mb-2 font-semibold text-white">Email:</label>
+              <input
+                className="w-full px-6 py-3 border border-indigo-500 rounded focus:outline-none focus:border-indigo-700"
+                placeholder="JohnHancock@iv.com"
+                name="email"
+                type="email"
+                id="email"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="mb-6">
+              <label htmlFor="password" className="block mb-2 font-semibold text-white">Password:</label>
+              <input
+                className="w-full px-6 py-3 border border-indigo-500 rounded focus:outline-none focus:border-indigo-700"
+                placeholder="******"
+                name="password"
+                type="password"
+                id="password"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="flex justify-center">
+              <button
+                className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded"
+                type="submit"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-      <form onSubmit={handleFormSubmit}>
-        <div className="relative mb-6" data-te-input-wrapper-init>
-          <label htmlFor="email">Email:</label>
-          <input
-            class="border-2 border-indigo-500"
-            placeholder="JohnHancock@iv.com"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            class="border-2 border-indigo-500"
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row flex-end bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
-      </div>
-    
+    </div>
   );
+  
+  
+  
 }
 export default Signup;
