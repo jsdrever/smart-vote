@@ -1,139 +1,45 @@
-## Collaborators
-This project was brought to you by the unrivaled creative minds of TableFlip Coders Andrew Allemond, Danielle Sison, Jeffrey Drever, Jesus Vazquez, Joshua Romani, Logan Landen, Tim Johnson, Vageli Stathatos
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
 # smart-vote
-![GitHub license](https://img.shields.io/badge/license-APACHE 2.0-blue.svg)
 
 ## Description
 
-Introducing SmartVote, the revolutionary website that empowers voters with intelligent and informed decision-making. With SmartVote, you can say goodbye to the confusion and time-consuming research that comes with election season. Our platform analyzes the positions, track records, and policies of candidates. Seamlessly navigate through profiles, compare stances, and gain insights into their voting history. With SmartVote, take charge of your vote and join the movement towards an informed electorate. Together, let's shape the future with SmartVote.
+Introducing Informed Voter, the revolutionary website that empowers voters with intelligent and informed decision-making. With Informed Voter, you can say goodbye to the confusion and time-consuming research that comes with election season. Our platform analyzes the positions, track records, and policies of candidates. Seamlessly navigate through profiles, compare stances, and gain insights into their voting history. With Inforemd Voter, take charge of your vote and join the movement towards an informed electorate. Together, let's shape the future with Informed Voter.
 
 ## Motivation
 We recognize the importance of an informed electorate and the impact it can have on shaping our society. By providing a comprehensive platform that analyzes candidate positions, track records, and policies, we aim to simplify the complex task of researching and understanding political candidates.
 
+## How to Use 
+Once the code has properly loaded, navigate to the intergrated terminal in the root directory and run the command `npm i` to install the application dependencies. After that, run the command `npm run develop` to deploy a development server. To acces the apollo server, simply navigate to `localhost:3001/graphql`; this allows access to the database queries.
 
-## Table of Contents 
+## At a Glance
 
-* [Installation](#installation)
+![2023-05-25](https://github.com/jsdrever/smart-vote/assets/117941643/411c9717-697a-4c2b-b2bb-afa82079606d)
+![2023-05-25 (1)](https://github.com/jsdrever/smart-vote/assets/117941643/b2fffc70-a7db-4868-a248-b02d925f87fe)
 
-* [Usage](#usage)
 
-* [License](#license)
+![2023-05-25 (4)](https://github.com/jsdrever/smart-vote/assets/117941643/0dfc0ebb-7fea-4a31-ae57-4557c32784de)
 
-* [Contributing](#contributing)
+![2023-05-25 (2)](https://github.com/jsdrever/smart-vote/assets/117941643/b49a6969-f3f0-42d4-8326-9d89189295f3)
+![2023-05-25 (3)](https://github.com/jsdrever/smart-vote/assets/117941643/ef00725a-eec4-425e-974b-c745eb8079a3)
 
-* [Tests](#tests)
-
-* [Questions](#questions)
-
-## Installation
-
-To install necessary dependencies, run the following command:
-
-```
-npm i && npm run seeds && npm start
-```
-
-## Usage
-
-Link to the github repo can be found here: https://github.com/jsdrever/smart-vote.git
 
 ## License
 
 This project is licensed under the APACHE 2.0 license.
   
-## Contributing
+## Collaborators
+This project was brought to you by the unrivaled creative minds of TableFlip Coders!
 
-Andrew Allemond: https://github.com/aallemond
-Danielle Sison: https://github.com/DanielleSison
-Jeffrey Drever: https://github.com/jsdrever
-Jesus Vazquez:  https://github.com/JesusV545
-Joshua Romani: https://github.com/DongleJosh
-Logan Landen: https://github.com/LoganWantstoCode
-Tim Johnson: https://github.com/timjohnson818
-Vageli Stathatos: https://github.com/bulkingfire
+- Andrew Allemond: [GitHub](https://github.com/aallemond)
+- Danielle Sison: [GitHub](https://github.com/DanielleSison)
+- Jeffrey Drever: [GitHub](https://github.com/jsdrever)
+- Jesus Vazquez: [GitHub](https://github.com/JesusV545)
+- Joshua Romani: [GitHub](https://github.com/DongleJosh)
+- Logan Landen: [GitHub](https://github.com/LoganWantstoCode)
+- Tim Johnson: [GitHub](https://github.com/timjohnson818)
+- Vageli Stathatos: [GitHub](https://github.com/bulkingfire)
 
-## Tests
 
-To run tests, run the following command:
+### Devoloper's Note
+"Empowerment lies within the diligent pursuit of knowledge. Before casting a vote, let curiosity be your compass, and research be your guiding light. For in the realm of democracy, an informed decision is the key that unlocks the door to a better future." -TableFlip Coders
 
-```
-npm test
-```
-
-## Questions
-
-If you have any questions about the repo, open an issue or contact me directly at jsdrever09@gmail.com. You can find more of my work at [jsdrever](https://github.com/jsdrever/).
-
+- This application is consistently being updated by our team. Feedback is always appreciated.

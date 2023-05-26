@@ -187,7 +187,10 @@ function Signup(props) {
           <button type="submit">Submit</button>
         </div>
       </form>
+      </div>
     </div>
+    </div>
+    </section>
   );
 }
 export default Signup;
