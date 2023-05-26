@@ -5,9 +5,14 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
       <>
-     { Auth.loggedIn() && (<div> Hello, {Auth.getProfile().data.email} </div>)} 
+    {Auth.loggedIn() && (
+      <div className="bg-gray-900 p-4 border-black">
+        <p className="text-lg text-white font-semibold">Hello, {Auth.getProfile().data.email}</p>
+      </div>
+    )}
+
     <nav className="bg-red-800 text-white border-y-2 border-black">
-      <div className="container mx-auto flex items-center justify-between px-4 py-2">
+      <div className="container mx-auto flex items-center justify-between px-0 py-4 text-lg">
         <ul className="flex space-x-4">
           <li>
             <Link to="/" className="hover:text-gray-300">
