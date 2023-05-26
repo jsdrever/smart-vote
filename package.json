@@ -22,9 +22,7 @@
     "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
     "serve": "^14.2.0",
-    "web-vitals": "^2.1.4"
-  },
-  "devDependencies": {
+    "web-vitals": "^2.1.4",
     "concurrently": "^5.3.0",
     "nodemon": "^2.0.22",
     "tailwindcss": "^3.3.2"
@@ -32,7 +30,7 @@
   "scripts": {
     "start": "concurrently \"cd server && npm run start\" \"cd client && react-scripts start\"",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-    "install": "npm i --dev && cd server && npm i --dev && cd ../client && npm i --dev",
+    "install": "cd server && npm i --dev && cd ../client && npm i --dev",
     "build": "cd client && npm run build",
     "test": "react-scripts test",
     "seed": "cd server && npm run seed",
