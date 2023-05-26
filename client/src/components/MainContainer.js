@@ -5,12 +5,14 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Senators from './pages/Senators';
 import Bills from './pages/Bills';
+import Billss from './pages/Billss';
 import NotFound from './pages/NotFound';
 import SearchResults from './pages/SearchResult';
 import ShopPage from './pages/ShopPage'
-import SignUp from './pages/Signup';
+import SignUp from './pages/SignUp';
 import Contact from './pages/NotFound';
 import Navbar from './Navbar';
+import Login from './pages/Login';
 
 export default function MainContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -32,6 +34,9 @@ export default function MainContainer() {
     if (currentPage === 'Bills') {
       return <Bills />;
     }
+    if (currentPage === 'Billss') {
+      return <Billss />;
+    }
     if (currentPage === 'Not-found') {
       return <NotFound />;
     }
@@ -44,6 +49,10 @@ export default function MainContainer() {
     if (currentPage === 'Sign-Up') {
       return <SignUp />;
       // senators X and Y / Opposition X and Y
+      
+    }
+    if (currentPage === 'Login') {
+      return <Login />;
     }
     return <Contact />;
     // senator and the bills they've voted on page

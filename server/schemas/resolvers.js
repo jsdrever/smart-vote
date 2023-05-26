@@ -1,5 +1,6 @@
 const {AuthenticationError} = require('apollo-server-express')
 const User = require('../models/User');
+const Senator = require('../models/Senator');
 // const bcrypt = require('bcrypt');
 const { signToken } = require('../utils/auth');
 
@@ -11,6 +12,14 @@ const resolvers = {
 
     user: async (parent, { userId }) => {
       return User.findOne({ _id: userId });
+    },
+
+    senators: async () => {
+      return Senator.find();
+    },
+
+    senator: async (parent, { senatorId }) => {
+      return Senator.findOne({ _id: senatorId });
     },
   },
   Mutation: {
